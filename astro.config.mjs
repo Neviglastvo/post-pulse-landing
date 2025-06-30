@@ -4,6 +4,7 @@ import astroI18next from "astro-i18next";
 export default defineConfig({
   integrations: [astroI18next()],
   build: {
-    inlineStylesheets: 'never'
+    inlineStylesheets: 'never',
+    assets: 'assets'
   }
 });
