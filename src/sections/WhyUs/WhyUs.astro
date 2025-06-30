@@ -1,0 +1,45 @@
+---
+import Section from "components/Section/Section.astro";
+---
+
+<Section className="whyUs">
+  <Fragment slot="title">
+    Why it's easier with <span>PostPulse</span>
+  </Fragment>
+  <Fragment slot="subtitle">
+    Save time, skip the routine, and keep your Telegram active without lifting a
+    finger. Here's what our platform handles for you.
+  </Fragment>
+
+  <div class="whyUs__content">
+    <div class="whyUsCard">
+      <p class="whyUsCard__title">Instant Post Generation</p>
+      <p class="whyUsCard__subtitle">
+        Enter a topic — get a ready-to-publish post in your tone of voice.
+      </p>
+    </div>
+    <div class="whyUsCard">
+      <p class="whyUsCard__title">Smart Scheduling</p>
+      <p class="whyUsCard__subtitle">
+        Plan your posts once. We take care of publishing them right on time.
+      </p>
+    </div>
+    <div class="whyUsCard">
+      <p class="whyUsCard__title">Auto-Publishing to Telegram</p>
+      <p class="whyUsCard__subtitle">
+        Connect your channel and forget manual posting — everything goes live
+        automatically.
+      </p>
+    </div>
+    <div class="whyUsCard">
+      <p class="whyUsCard__title">No More Creative Burnout</p>
+      <p class="whyUsCard__subtitle">
+        We help you come up with fresh content ideas when inspiration runs dry.
+      </p>
+    </div>
+  </div>
+</Section>
+
+<style lang="scss">
+  @use "./_WhyUs.scss";
+</style>

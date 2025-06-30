@@ -1,0 +1,39 @@
+@use "sass:color";
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 16px;
+
+  border: none;
+  border-radius: $bRadius * 5px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  & > a {
+    @include typography($cText, 16px);
+
+    opacity: 0.8;
+    text-decoration: none;
+
+    transition: all 0.3s linear;
+    padding: 8px 16px;
+
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.active {
+      color: $cPrimary;
+      font-weight: 700;
+      opacity: 1;
+    }
+  }
+}

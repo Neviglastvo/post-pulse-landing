@@ -1,0 +1,40 @@
+---
+const {
+  maxWidth = "100%",
+  padding = "80px 16px",
+  background = "0 16px",
+  radius = "0",
+  className = "",
+} = Astro.props;
+---
+
+<section
+  class={`section ${className}`}
+  style={`max-width: ${maxWidth}; padding: ${padding}; background: ${background}; border-radius: ${radius};`}
+>
+  {
+    Astro.slots.has("title") && (
+      <h2 class="section__title">
+        <slot name="title" slot="h2">
+          This is my fallback content, if there is no child passed into slot
+        </slot>
+      </h2>
+    )
+  }
+  {
+    Astro.slots.has("subtitle") && (
+      <h3 class="section__subtitle">
+        <slot name="subtitle" slot="h3">
+          <p>
+            This is my fallback content, if there is no child passed into slot
+          </p>
+        </slot>
+      </h3>
+    )
+  }
+  <slot />
+</section>
+
+<style lang="scss">
+  @use "./_Section.scss";
+</style>

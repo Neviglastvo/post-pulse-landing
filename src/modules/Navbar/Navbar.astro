@@ -1,0 +1,22 @@
+---
+import Button from "components/Button/Button.astro";
+import Nav from "components/Nav/Nav.astro";
+import logo from "assets/svg/logo.svg";
+---
+
+<div class="navbar">
+  <a href="#home" class="navbar__logo">
+    <img src={logo.src} alt="Logo" />
+  </a>
+
+  <Nav />
+
+  <div class="navbar__actions">
+    <Button>Log In</Button>
+    <Button>Start Free Trial</Button>
+  </div>
+</div>
+
+<style lang="scss">
+  @use "./_Navbar.scss";
+</style>

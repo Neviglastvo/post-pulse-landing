@@ -1,0 +1,22 @@
+@use "./_variables.scss" as *;
+
+@mixin fancyBorder($size: 1px) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: -$size;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(145deg, #FFFFFF3F 25%, transparent );
+  }
+}
+
+@mixin typography($color: $cText, $size: 12px, $fw: 500, $lh: $size * 1.5) {
+  font-family: $fFamily;
+  font-size: $size;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $color;
+}

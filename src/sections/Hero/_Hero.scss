@@ -1,0 +1,59 @@
+@use "sass:color";
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.hero {
+  width: 100%;
+  height: calc(100vh - $navHeightPx - 8px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: $cBackgroundHero;
+
+  padding: 16px;
+
+  border-radius: 0 0 $bRadiusBlockPx $bRadiusBlockPx;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 846px;
+    
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    
+    @include typography($cText, 42px, 600);
+
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 52px;
+    
+    @include typography($cTextSecondary, 18px, 200);
+  }
+
+  &__bg {
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    margin: auto 0;
+
+    max-width: 1000px;
+    z-index: -1;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 16px;
+  }
+}

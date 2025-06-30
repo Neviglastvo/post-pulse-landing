@@ -1,0 +1,21 @@
+@use 'scss-reset';
+
+@use "_variables.scss" as *;
+@use "_fonts.scss";
+@use "_mixins.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Geologica:ital,wght@0,300..900;1,300..900&display=swap");
+
+body {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  
+  background: $cBackground;
+  font-family: "Geologica";
+  overflow-x: hidden;
+
+  padding-top: $navHeightPx;
+  box-sizing: inherit;
+}

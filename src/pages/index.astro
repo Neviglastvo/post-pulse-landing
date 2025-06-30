@@ -1,0 +1,17 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "modules/Navbar/Navbar.astro";
+import Hero from "src/sections/Hero/Hero.astro";
+import WhyUs from "src/sections/WhyUs/WhyUs.astro";
+
+changeLanguage("en");
+---
+
+<Layout>
+  <!-- <Welcome /> -->
+  <Navbar />
+
+  <Hero />
+  <WhyUs />
+</Layout>

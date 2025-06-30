@@ -1,0 +1,50 @@
+@use "sass:color";
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: $navHeightPx;
+
+  padding: 0 16px;
+
+  background-color: $cBackground;
+  border-bottom: 1px solid $cBorder;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+
+    & > img {
+      max-width: 170px;
+      width: 100%;
+    }
+
+    & > h1 {
+      @include typography($cText, 24px);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: $maxWidthPx;
+  }
+
+  &__container {
+    max-width: $maxWidthPx;
+    margin: 0 auto;
+  }
+
+}
