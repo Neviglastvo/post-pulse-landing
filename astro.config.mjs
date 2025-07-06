@@ -5,6 +5,7 @@ export default defineConfig({
   integrations: [astroI18next()],
   build: {
     inlineStylesheets: 'never',
-    assets: 'assets'
-  }
+    assets: 'assets',
+  },
+  site: 'https://neviglastvo.github.io/post-pulse-landing',
 });

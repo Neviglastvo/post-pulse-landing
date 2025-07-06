@@ -1,0 +1,77 @@
+---
+import Section from "components/Section/Section.astro";
+---
+
+<Section className="keyFeatures" radius="48px" background="#232323">
+  <Fragment slot="title">
+    Go live in <span>3 simple steps</span>
+  </Fragment>
+  <Fragment slot="subtitle">
+    Save time, skip the routine, and keep your Telegram active without lifting a
+    finger. Here's what our platform handles for you.
+  </Fragment>
+
+  <div class="keyFeatures__content">
+    <div data-i="1" class="keyFeaturesCard active">
+      <div class="keyFeaturesCard__title">Connect</div>
+      <div class="keyFeaturesCard__description">
+        Securely link your Telegram bot and social accounts in minutes.
+      </div>
+      <img
+        src="assets/images/keyFeatures/1x2.png"
+        alt=""
+        class="keyFeaturesCard__image"
+      />
+    </div>
+    <div data-i="2" class="keyFeaturesCard">
+      <div class="keyFeaturesCard__title">Customize</div>
+      <div class="keyFeaturesCard__description">
+        (Optional, but powerful!) Give the AI a few of your best posts to learn
+        your unique style.
+      </div>
+      <img
+        src="assets/images/keyFeatures/2x2.png"
+        alt=""
+        class="keyFeaturesCard__image"
+      />
+    </div>
+    <div data-i="3" class="keyFeaturesCard">
+      <div class="keyFeaturesCard__title">Create</div>
+      <div class="keyFeaturesCard__description">
+        Generate your first post, schedule it, and watch PostPulse do the rest.
+      </div>
+      <img
+        src="assets/images/keyFeatures/3x2.png"
+        alt=""
+        class="keyFeaturesCard__image"
+      />
+    </div>
+  </div>
+</Section>
+
+<style lang="scss">
+  @use "./_KeyFeatures.scss";
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".keyFeaturesCard");
+
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", function (event) {
+        // Remove active class from all cards
+        cards.forEach((c) => {
+          c.classList.remove("active");
+
+          const cardHead = c.querySelector(".keyFeaturesCard__head");
+        });
+        // Add active class to clicked card
+        (event.currentTarget as HTMLElement).classList.add("active");
+
+        const cardHead = (event.currentTarget as HTMLElement).querySelector(
+          ".keyFeaturesCard__head"
+        );
+      });
+    });
+  });
+</script>
